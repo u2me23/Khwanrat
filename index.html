@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ทนายเก้า ขวัญรัตน์ พนมขวัญ</title>
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+        <style>
+            /* 1. ประกาศให้เบราว์เซอร์รู้จักฟอนต์ในเครื่องเรา */
+            @font-face {
+                font-family: 'Anakotmai';
+                src: url('webfont/Anakotmai-Light.woff2') format('woff2');
+                font-weight: 300;
+            }
+
+            @font-face {
+                font-family: 'Anakotmai';
+                src: url('webfont/Anakotmai-Medium.woff2') format('woff2');
+                font-weight: 500;
+            }
+
+            @font-face {
+                font-family: 'Anakotmai';
+                src: url('webfont/Anakotmai-Bold.woff2') format('woff2');
+                font-weight: 700;
+            }
+
+            /* 2. สั่งให้ทั้งเว็บใช้ฟอนต์นี้ และใส่ค่าสีพื้นหลังส้มอ่อนที่คุณต้องการ */
+            body { 
+                font-family: 'Anakotmai', sans-serif; 
+                scroll-behavior: smooth; 
+                background-color: #FFF7ED; /* สีส้มอ่อน (orange-50) */
+            }
+
+            /* 3. ค่าสีเฉพาะของพรรค (ห้ามลบ เพราะใน HTML มีการเรียกใช้คลาสเหล่านี้) */
+            .bg-pp-gradient { background: linear-gradient(135deg, #FF7A00 0%, #FF5C00 100%); }
+            .text-pp-orange { color: #FF5C00; }
+            .border-pp-orange { border-color: #FF5C00; }
+            
+            .social-icon { transition: all 0.3s ease; }
+            .social-icon:hover { transform: translateY(-5px); color: #FF5C00; }
+            
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                min-width: 180px;
+                z-index: 100;
+            }
+            .show { display: block !important; }
+
+            .profile-shadow {
+                box-shadow: 0 20px 25px -5px rgba(255, 92, 0, 0.2);
+            }
+        </style>
+</head>
+<body class="bg-gray-50 text-slate-800">
+
+    <div id="user-view">
+        <nav class="bg-slate-900 text-white p-4 sticky top-0 z-50 shadow-md border-b-4 border-pp-orange">
+            <div class="container mx-auto flex justify-between items-center">
+                
+                <div class="flex items-center space-x-3">
+                    <img src="Logo.svg" alt="Logo" class="h-10 w-auto object-contain">
+                    
+                    <span class="text-pp-orange font-bold text-lg tracking-tight border-r border-slate-700 pr-4">
+                        พรรคประชาชน
+                    </span>
+                    
+                    <h1 class="text-white font-medium text-base hidden lg:block pl-1">
+                        เก้า ขวัญรัตน์ พนมขวัญ
+                    </h1>
+                </div>
+                
+                <div class="space-x-4 md:space-x-6 text-sm font-medium flex items-center">
+                    <div class="relative">
+                        <button id="menuBtn" class="flex items-center hover:text-orange-400 transition focus:outline-none py-2 font-bold">
+                            เมนู <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
+                        </button>
+                        <div id="myDropdown" class="dropdown-content bg-white text-slate-900 mt-2 shadow-xl border-t-4 border-pp-orange rounded-b-md py-2">
+                            <a href="index.html" class="block px-4 py-3 hover:bg-orange-50 border-b border-gray-100 transition">
+                                <i class="fas fa-home text-pp-orange mr-2"></i> หน้าหลัก
+                            </a>
+                            <a href="localwork.html" class="block px-4 py-3 hover:bg-orange-50 transition">
+                                <i class="fas fa-map-marker-alt text-pp-orange mr-2"></i> งานพื้นที่
+                            </a>
+                            </div>
+                    </div>
+
+                    <a href="#report" class="bg-pp-gradient px-4 py-2 rounded-full text-white font-bold hover:brightness-110 transition shadow-lg text-xs md:text-sm">
+                        แจ้งปัญหา
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <header id="home" class="bg-white py-20 border-b border-gray-100">
+            <div class="container mx-auto px-4 flex flex-col items-center text-center">
+                <div class="relative mb-8">
+                    <div class="w-64 h-64 bg-slate-200 rounded-full overflow-hidden profile-shadow border-4 border-white ring-4 ring-orange-500/20">
+                        <img src="profilepic.jpg" alt="เก้า ขวัญรัตน์ พนมขวัญ" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute bottom-2 right-0 bg-pp-gradient text-white px-4 py-1 font-bold text-xs shadow-lg rounded-full">
+                        ทนายเก้า
+                    </div>
+                </div>
+
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl md:text-3xl font-black text-slate-900 mb-2 uppercase tracking-tight">ทนายเก้า ขวัญรัตน์ พนมขวัญ</h2>
+                    <p class="text-pp-orange text-xl font-bold mb-4">พรรคประชาชน | People's Party</p>
+                    <p class="text-black font-bold mb-4 bg-orange-50 inline-block px-4 py-1 rounded-full">อดีตผู้สมัครรับเลือกตั้งสมาชิกสภาผู้แทนราษฎร แพร่ เขต 1</p>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8 italic">
+                        "โดยประชาชน เพื่อประชาชน สร้างประเทศไทยที่อำนาจสูงสุดเป็นของประชาชน"
+                    </p>
+
+                    <div class="flex justify-center gap-8 text-3xl">
+                        <a href="https://www.facebook.com/profile.php?id=61577619298919" target="_blank" class="social-icon text-slate-400 hover:text-[#1877F2]" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/kaokhwanrat" target="_blank" class="social-icon text-slate-400 hover:text-[#E4405F]" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@khwanratpanomkwan" target="_blank" class="social-icon text-slate-400 hover:text-black" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+<section id="plan" class="py-20 bg-white/50 border-t border-orange-100">
+    <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="text-center mb-16">
+                <span class="bg-orange-100 text-pp-orange px-4 py-1 rounded-full text-sm font-bold mb-4 inline-block">Vision for Phrae</span>
+                <h3 class="text-4xl md:text-5xl font-black text-slate-900 mt-2 mb-6">
+                    "แพร่โมเดล" <span class="text-pp-orange">18 เดือนเปลี่ยนเมืองแพร่</span>
+                </h3>
+                <p class="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
+                    เปลี่ยนจังหวัดแพร่ให้เป็น <span class="font-bold border-b-2 border-green-500">Green Teak Hub</span> ด้วยการทลายข้อจำกัดทางกฎหมายที่ล้าหลัง คืนอาชีพให้สล่า และปูทางสู่เศรษฐกิจสีเขียว (BCG Economy) ที่ยั่งยืน
+                </p>
+            </div>
+
+            <div class="bg-slate-900 text-white p-8 md:p-12 rounded-3xl mb-12 shadow-2xl relative overflow-hidden">
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-3xl font-black text-orange-400 mb-4">Operation 18</h4>
+                        <p class="text-lg text-slate-300">ปฏิบัติการยกเลิกใบอนุญาตล้าสมัยของระบบราชการภายใน 18 เดือน ผ่าน 3 ยุทธศาสตร์หลักเพื่อคนเมืองแพร่</p>
+                    </div>
+                    <div class="bg-pp-gradient p-6 rounded-2xl text-center min-w-[200px]">
+                        <span class="text-sm uppercase tracking-widest block mb-1">Timeline</span>
+                        <span class="text-4xl font-black">18 เดือน</span>
+                    </div>
+                </div>
+                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-orange-500/10 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-pp-orange hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-pp-gradient transition-colors">
+                        <i class="fas fa-unlock-alt text-pp-orange text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h5 class="text-xl font-bold mb-4 text-slate-900">1. ปลดล็อกใบอนุญาตไม้สัก</h5>
+                    <ul class="text-slate-600 space-y-3 text-sm leading-relaxed">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> <strong>เร่งรัดทุกขั้นตอน:</strong> ยกเลิกกฎระเบียบค้าไม้/แปรรูปที่ไม่จำเป็น ให้ชาวบ้านทำกินได้ทันที</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> <strong>ระบบอนุมัติแบ่งตามความเสี่ยง:</strong> รายย่อยแค่ "จดแจ้ง" ก็ทำได้เลย ส่วนรายใหญ่ใช้ AI ตรวจสอบลดการใช้ดุลพินิจ</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-pp-orange hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-pp-gradient transition-colors">
+                        <i class="fas fa-gavel text-pp-orange text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h5 class="text-xl font-bold mb-4 text-slate-900">2. กฎหมาย "30 วันต้องจบ"</h5>
+                    <ul class="text-slate-600 space-y-3 text-sm leading-relaxed">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> <strong>No More Corruption:</strong> หากรัฐไม่ตอบกลับภายใน 30 วัน ให้ถือว่า "อนุญาตอัตโนมัติ"</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> <strong>ห้ามขอเอกสารซ้ำซ้อน:</strong> ปิดช่องโหว่ประวิงเวลาเรียกรับส่วย</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-pp-orange hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-pp-gradient transition-colors">
+                        <i class="fas fa-globe-asia text-pp-orange text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h5 class="text-xl font-bold mb-4 text-slate-900">3. เชื่อมโยงตลาดโลก</h5>
+                    <ul class="text-slate-600 space-y-3 text-sm leading-relaxed">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> <strong>ยกระดับสล่าเมืองแพร่:</strong> สนับสนุนนวัตกรรมการออกแบบเพื่อส่งออกสินค้ามูลค่าสูง</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> <strong>มาตรฐาน Certification:</strong> ผลักดันไม้สักแพร่สู่มาตรฐานสากล ยึดหลักเศรษฐกิจสีเขียว</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-orange-50 border-2 border-dashed border-orange-200 p-10 rounded-3xl text-center">
+                <h4 class="text-2xl font-bold text-slate-900 mb-4">ถึงเวลาที่เราต้องเปลี่ยนอนาคตให้เมืองแพร่</h4>
+                <p class="text-slate-700 leading-relaxed mb-8 max-w-2xl mx-auto">
+                    เก้าจะไม่ยอมให้ "เมืองแพร่โรยรา" คนรุ่นใหม่ต้องจากบ้าน และกิจการไม้ต้องถูกพันธนาการด้วยกฎเก่าอีกต่อไป นี่คือภารกิจที่ต้องทำร่วมกัน เพื่อคืนความหวังให้คนทำไม้เมืองแพร่ทุกคน
+                </p>
+                <p class="text-2xl font-black text-pp-orange">"ก้าวเปลี่ยนแพร่" ไปด้วยกัน</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <section id="report" class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <div class="text-center mb-10">
+                    <h3 class="text-3xl font-black text-slate-900 uppercase">แจ้งเรื่องร้องเรียน / นัดหมาย</h3>
+                    <div class="w-20 h-1.5 bg-pp-gradient mx-auto mt-4"></div>
+                </div>
+                <div class="bg-white p-8 border border-slate-100 shadow-2xl rounded-2xl">
+                    <form id="reportForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">หัวข้อเรื่องหรือสถานที่นัดหมาย</label>
+                            <input type="text" id="title" class="w-full p-4 border-2 border-slate-100 rounded-lg focus:border-pp-orange outline-none transition bg-gray-50" placeholder="เช่น กลิ่นขยะ / นัดลงพื้นที่หมู่บ้าน..." required>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">หมวดหมู่</label>
+                                <select id="category" class="w-full p-4 border-2 border-slate-100 rounded-lg focus:border-pp-orange outline-none bg-gray-50">
+                                    <option>สาธารณูปโภค (น้ำ/ไฟ/ถนน)</option>
+                                    <option>สิ่งแวดล้อม/ขยะ</option>
+                                    <option>นัดหมายลงพื้นที่</option>
+                                    <option>สวัสดิการ/สังคม</option>
+                                    <option>อื่นๆ</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">ลงชื่อผู้ติดต่อ</label>
+                                <input type="text" id="name" class="w-full p-4 border-2 border-slate-100 rounded-lg focus:border-pp-orange outline-none bg-gray-50" placeholder="ชื่อ-นามสกุล" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">เบอร์โทรศัพท์ติดต่อ</label>
+                            <input type="tel" id="phone" class="w-full p-4 border-2 border-slate-100 rounded-lg focus:border-pp-orange outline-none bg-gray-50" placeholder="08x-xxxxxxx" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">รายละเอียดเพิ่มเติม</label>
+                            <textarea id="details" rows="5" class="w-full p-4 border-2 border-slate-100 rounded-lg focus:border-pp-orange outline-none transition bg-gray-50" placeholder="ระบุตำแหน่งที่เกิดเหตุ..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="w-full bg-pp-gradient text-white font-black py-5 text-xl hover:brightness-110 transition-all shadow-xl rounded-lg">
+                            <span id="btnText">ส่งข้อมูลแจ้งเรื่องทันที</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-slate-50 text-center border-t border-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto">
+                    <h3 class="text-3xl font-black text-slate-900 mb-4 uppercase">ร่วมเป็นส่วนหนึ่งของการเปลี่ยนแปลง</h3>
+                    <p class="text-slate-600 mb-10 text-lg leading-relaxed">
+                        สนับสนุนการทำงานของพรรคประชาชน เพื่อสร้างการเมืองที่โปร่งใส <br class="hidden md:block"> และทำงานเพื่อพี่น้องประชาชนอย่างแท้จริง
+                    </p>
+                    <a href="https://donation.peoplesparty.or.th/donate" target="_blank" 
+                       class="inline-block bg-pp-gradient px-12 py-5 rounded-full text-white font-black text-xl hover:scale-105 transition-all shadow-2xl shadow-orange-200">
+                        <i class="fas fa-heart mr-2"></i> สนับสนุนพรรคประชาชน
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-slate-900 text-slate-400 py-12 text-center border-t-4 border-pp-orange">
+            <p class="font-bold text-white mb-2">© 2026 สส.เก้า ขวัญรัตน์ พนมขวัญ | จนกว่าอำนาจสูงสุดจะเป็นของประชาชน</p>
+            <p class="text-sm">อดีตผู้สมัครรับเลือกตั้งสมาชิกสภาผู้แทนราษฎร แพร่ เขต 1</p>
+        </footer>
+    </div>
+
+    <script>
+        // Dropdown Logic
+        const menuBtn = document.getElementById('menuBtn');
+        const dropdown = document.getElementById('myDropdown');
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('show');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target)) dropdown.classList.remove('show');
+        });
+
+        // Form Logic
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw5aKDUF5Ciw47zrBCiChkX-kZvJYtpNlSV_6juOYwmO_4GtgwrM_-fUC5DhHnLa3EQ/exec';
+
+        document.getElementById('reportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            btn.disabled = true;
+            btnText.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i> กำลังส่งข้อมูล...';
+
+            const formData = {
+                title: document.getElementById('title').value,
+                category: document.getElementById('category').value,
+                details: document.getElementById('details').value,
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value
+            };
+
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: JSON.stringify(formData)
+            })
+            .then(res => {
+                alert('ส่งข้อมูลถึงทีมงาน สส.เก้า เรียบร้อยแล้วครับ!');
+                document.getElementById('reportForm').reset();
+            })
+            .catch(err => alert('ขออภัย ระบบขัดข้องชั่วคราว'))
+            .finally(() => {
+                btn.disabled = false;
+                btnText.innerText = 'ส่งข้อมูลแจ้งเรื่องทันที';
+            });
+        });
+
+                // ฟังก์ชันปิดประกาศ
+                function closeAnnouncement() {
+                    document.getElementById('announcementModal').classList.add('hidden');
+                }
+                    window.addEventListener('load', () => {
+                        setTimeout(() => {
+                            const modal = document.getElementById('announcementModal');
+                            modal.classList.remove('hidden');
+                // ลูกเล่นขยายรูปเบาๆ แบบพรรคประชาชน
+                        setTimeout(() => {
+                            modal.querySelector('.transform').classList.remove('scale-95');
+                            modal.querySelector('.transform').classList.add('scale-100');
+                                }, 10);
+                            }, 1200); // แสดงหลังจากเข้าเว็บ 1.2 วินาที
+                        });
+    </script>
+
+                    <div id="announcementModal" class="fixed inset-0 z-[200] flex items-center justify-center bg-black bg-opacity-85 hidden px-4">
+                        <div class="relative w-full md:w-[70%] max-w-4xl transform transition-all scale-95 duration-300">
+                            
+                            <button onclick="closeAnnouncement()" class="absolute -top-3 -right-3 bg-pp-orange text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-slate-900 transition z-[210] shadow-lg border-2 border-white">
+                                <i class="fas fa-times text-lg"></i>
+                            </button>
+
+                            <div class="overflow-hidden rounded-sm shadow-2xl">
+                                <a href="https://www.facebook.com/share/p/1CAsz5bGcB/" target="_blank" class="block">
+                                    <img src="arsasom.jpg" class="w-full max-h-[80vh] object-contain alt="อาสาส้มไปกับเก้า" class="w-full h-auto block">
+                                </a>
+                            </div>
+
+                            <p class="text-white text-opacity-50 text-center text-xs mt-4 uppercase tracking-widest">
+                                คลิกที่รูปเพื่อดูรายละเอียด หรือกด [X] เพื่อปิด
+                            </p>
+                        </div>
+                    </div>
+
+</body>
+</html>
