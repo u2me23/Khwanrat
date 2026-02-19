@@ -71,20 +71,35 @@
                         <button id="menuBtn" class="flex items-center hover:text-orange-400 transition focus:outline-none py-2 font-bold">
                             เมนู <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
                         </button>
-                        <div id="myDropdown" class="dropdown-content bg-white text-slate-900 mt-2 shadow-xl border-t-4 border-pp-orange rounded-b-md py-2">
-                            <a href="index.html" class="block px-4 py-3 hover:bg-orange-50 border-b border-gray-100 transition">
-                                <i class="fas fa-home text-pp-orange mr-2"></i> หน้าหลัก
-                            </a>
-                            <a href="target.html" class="block px-4 py-3 hover:bg-orange-50 transition">
-                                <i class="fas fa-map-marker-alt text-pp-orange mr-2"></i> สิ่งที่อยากผลักดัน
-                            </a>
-                            <a href="work.html" class="block px-4 py-3 hover:bg-orange-50 transition">
-                                <i class="fas fa-map-marker-alt text-pp-orange mr-2"></i> งานพื้นที่
-                            </a>
-                        </div>
+                            <div id="myDropdown" class="dropdown-content bg-white text-slate-900 mt-2 shadow-xl border-t-4 border-pp-orange rounded-b-md py-2">
+                                <a href="index.html" class="block px-4 py-3 hover:bg-orange-50 border-b border-gray-100 transition">
+                                    <i class="fas fa-home text-pp-orange mr-2"></i> หน้าหลัก
+                                </a>
+                                
+                                <div class="relative group">
+                                    <button id="subBtn" class="w-full text-left px-4 py-3 hover:bg-orange-50 transition flex justify-between items-center border-b border-gray-100 font-bold">
+                                        <span><i class="fas fa-bullseye text-pp-orange mr-2"></i> สิ่งที่อยากผลักดัน</span>
+                                        <i class="fas fa-chevron-right text-[10px]"></i>
+                                    </button>
+                                    
+                                    <div id="subMenu" class="hidden bg-slate-50 border-l-4 border-pp-orange">
+                                        <a href="target.html" class="block px-8 py-2 text-sm hover:text-pp-orange transition">• นโยบาย</a>    
+                                        <a href="policy_teak.html" class="block px-8 py-2 text-sm hover:text-pp-orange transition">• ไม้สักยั่งยืน</a>
+                                        <a href="policy_leangov.html" class="block px-8 py-2 text-sm hover:text-pp-orange transition">• รัฐโปร่งใส</a>
+                                    </div>
+                                </div>
+
+                                <a href="work.html" class="block px-4 py-3 hover:bg-orange-50 border-b border-gray-100 transition">
+                                    <i class="fas fa-briefcase text-pp-orange mr-2"></i> งานพื้นที่
+                                </a>
+                                <a href="report.html" class="block px-4 py-3 hover:bg-orange-50 transition">
+                                    <i class="fas fa-comment-alt text-pp-orange mr-2"></i> แจ้งปัญหา/นัดหมาย
+                                </a>
+                            </div>
                     </div>
                     <a href="#report" class="bg-pp-orange px-4 py-2 rounded-full text-white font-bold hover:brightness-110 transition shadow-lg text-xs md:text-sm">แจ้งปัญหา</a>
                 </div>
+
             </div>
         </nav>
 
@@ -122,6 +137,329 @@
                         </div>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
+                                    <div class="relative h-64 overflow-hidden">
+                                        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-full">
+                                            <div class="flex-shrink-0 w-full h-full snap-center">
+                                                <img src="image/20260127-001.jpg" alt="กิจกรรมพื้นที่" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute top-3 right-3 flex flex-col items-end gap-2">
+                                            <div class="bg-white/95 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-lg shadow-lg border border-slate-200/50 flex flex-col items-center min-w-[55px]">
+                                                <span class="text-[10px] font-bold uppercase text-pp-orange leading-none">ม.ค.</span>
+                                                <span class="text-xl font-black leading-none py-0.5">27</span>
+                                                <span class="text-[9px] text-slate-500 font-bold">2569</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                            <span class="text-white text-xs font-bold bg-pp-orange px-2 py-1 rounded">ลงพื้นที่</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="font-bold text-lg mb-2 group-hover:text-pp-orange transition">ศึกษาธรรมชาติของน้ำเพื่อการพัฒนาและแก้ปัญหา</h4>
+                                        <p class="text-slate-600 text-sm mb-4">ดูโครงการก่อสร้างถนนริมแม่น้ำยมฝั่งตะวันออกบ้านเชตะวัน(บ้านเขียว) การถมแม่น้ำเพื่อสร้างถนนแทนการเวนคืน ยิ่งทำให้ลำน้ำแคบลง 
+                                            กระแสน้ำในฤดูน้ำหลากจะเชี่ยวกราก มาเจอโครงสร้างแข็งตลอดแนว ก็มีโอกาสที่น้ำจะท่วมสูงและไหลแรงขึ้น ส่งผลให้อุทกภัยรุนแรงหนักกว่าเดิม เพื่อศึกษาความเป็นไปได้ในการวางแผนแก้ปัญหาน้ำท่วมเมืองแพร่ในระยะยาว</p>
+                                        <a href="https://www.facebook.com/share/p/1EDMznebeG/" target="_blank" class="inline-flex items-center text-xs font-bold text-pp-orange hover:text-slate-900 transition-colors">
+                                            ดูโพสต์ต้นฉบับ <i class="fab fa-facebook-f ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
+                                    <div class="relative h-64 overflow-hidden">
+                                        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-full">
+                                            <div class="flex-shrink-0 w-full h-full snap-center">
+                                                <img src="image/20260114-001.jpg" alt="กิจกรรมพื้นที่" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute top-3 right-3 flex flex-col items-end gap-2">
+                                            <div class="bg-white/95 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-lg shadow-lg border border-slate-200/50 flex flex-col items-center min-w-[55px]">
+                                                <span class="text-[10px] font-bold uppercase text-pp-orange leading-none">ม.ค.</span>
+                                                <span class="text-xl font-black leading-none py-0.5">14</span>
+                                                <span class="text-[9px] text-slate-500 font-bold">2569</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                            <span class="text-white text-xs font-bold bg-pp-orange px-2 py-1 rounded">ลงพื้นที่</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="font-bold text-lg mb-2 group-hover:text-pp-orange transition">ลงพื้นที่รับฟังปัญหาจากคนเฒ่า คนแก่</h4>
+                                        <p class="text-slate-600 text-sm mb-4">พูดคุย รับฟัง ข้อคิดเห็น ปัญหา และข้อเสนอแนะจากชาวบ้านโดยตรงมักจะมอบประสบณ์การตรงในการทำนโยบายเพื่อประชาชนได้ดีที่สุดนายกลี่ สุภวัฒน์ ศุภศิริ นายกเทศมนตรีตำบลป่าแมต ต้อนรับเก้าและคุณเพชร กรุณพล 
+                                            ร่วมแลกเปลี่ยนแนวคิดการแก้ปัญหาน้ำท่วมน้ำแล้ง และการป้องกันอุทกภัยในพื้นที่น้ำท่วมบริเวณเขตเทศบาลตำบลป่าแมต จังหวัดแพร่</p>
+                                        <a href="https://www.facebook.com/share/p/1GeC9YGNPQ/" target="_blank" class="inline-flex items-center text-xs font-bold text-pp-orange hover:text-slate-900 transition-colors">
+                                            ดูโพสต์ต้นฉบับ <i class="fab fa-facebook-f ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
+                                    <div class="relative h-64 overflow-hidden">
+                                        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-full">
+                                            <div class="flex-shrink-0 w-full h-full snap-center">
+                                                <img src="image/20260112-001.jpg" alt="กิจกรรมพื้นที่" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute top-3 right-3 flex flex-col items-end gap-2">
+                                            <div class="bg-white/95 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-lg shadow-lg border border-slate-200/50 flex flex-col items-center min-w-[55px]">
+                                                <span class="text-[10px] font-bold uppercase text-pp-orange leading-none">ม.ค.</span>
+                                                <span class="text-xl font-black leading-none py-0.5">12</span>
+                                                <span class="text-[9px] text-slate-500 font-bold">2569</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                            <span class="text-white text-xs font-bold bg-pp-orange px-2 py-1 rounded">ลงพื้นที่</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="font-bold text-lg mb-2 group-hover:text-pp-orange transition">เดินเสริฟนโยบายและถกปัญหา</h4>
+                                        <p class="text-slate-600 text-sm mb-4">ลงพื้นที่คลองถมมาร์คโฟร์เสร์ฟนโยบายและสอบถามปัญหาจากประชาชนโดยตรงเพื่อนำไปปรับปรุงนโยบายให้ตรงเป้าประสงค์ของประชาชนมากที่สุด</p>
+                                        <a href="https://www.facebook.com/share/p/1DQqu3V9ry/" target="_blank" class="inline-flex items-center text-xs font-bold text-pp-orange hover:text-slate-900 transition-colors">
+                                            ดูโพสต์ต้นฉบับ <i class="fab fa-facebook-f ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
+                                    <div class="relative h-64 overflow-hidden">
+                                        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-full">
+                                            <div class="flex-shrink-0 w-full h-full snap-center">
+                                                <img src="image/20260105-001.jpg" alt="กิจกรรมพื้นที่" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute top-3 right-3 flex flex-col items-end gap-2">
+                                            <div class="bg-white/95 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-lg shadow-lg border border-slate-200/50 flex flex-col items-center min-w-[55px]">
+                                                <span class="text-[10px] font-bold uppercase text-pp-orange leading-none">ม.ค.</span>
+                                                <span class="text-xl font-black leading-none py-0.5">05</span>
+                                                <span class="text-[9px] text-slate-500 font-bold">2569</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                            <span class="text-white text-xs font-bold bg-pp-orange px-2 py-1 rounded">นโยบาย</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="font-bold text-lg mb-2 group-hover:text-pp-orange transition">หมา-แมวก้าวหน้า</h4>
+                                        <p class="text-slate-600 text-sm mb-4">นโยบายขึ้นทะเบียนฝังชิพสัตวเลี้ยงสัตว์จร ให้สิทธิลดหย่อนภาษีแก่เจ้าของ และอุดหนุนงบประมาณท้องถิ่นจัดการดูแลอย่างเป็นระบบและปลอดภัย</p>
+                                        <a href="https://www.facebook.com/share/p/1Krn9utDU2/" target="_blank" class="inline-flex items-center text-xs font-bold text-pp-orange hover:text-slate-900 transition-colors">
+                                            ดูโพสต์ต้นฉบับ <i class="fab fa-facebook-f ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
+                                    <div class="relative h-64 overflow-hidden">
+                                        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-full">
+                                            <div class="flex-shrink-0 w-full h-full snap-center">
+                                                <img src="image/20260103-001.jpg" alt="กิจกรรมพื้นที่" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute top-3 right-3 flex flex-col items-end gap-2">
+                                            <div class="bg-white/95 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-lg shadow-lg border border-slate-200/50 flex flex-col items-center min-w-[55px]">
+                                                <span class="text-[10px] font-bold uppercase text-pp-orange leading-none">ม.ค.</span>
+                                                <span class="text-xl font-black leading-none py-0.5">03</span>
+                                                <span class="text-[9px] text-slate-500 font-bold">2569</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                            <span class="text-white text-xs font-bold bg-pp-orange px-2 py-1 rounded">นโยบาย</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="font-bold text-lg mb-2 group-hover:text-pp-orange transition">กาดกองเก่า</h4>
+                                        <p class="text-slate-600 text-sm mb-4">ลงพื้นที่กาดกองเก่าเพื่อนำเสนอนโยบายพื้นที่ให้กับกลุ่มผู้ค้าขายในแลนด์มาร์กหนึ่งของจังหวัดแพร่ ซึ่งมีหลากหลายผู้คนมาพบปะกันเพื่อรังสรรค์สิ่งที่ดีสู่สังคม</p>
+                                        <a href="https://www.facebook.com/share/p/17VYqTxZiA/" target="_blank" class="inline-flex items-center text-xs font-bold text-pp-orange hover:text-slate-900 transition-colors">
+                                            ดูโพสต์ต้นฉบับ <i class="fab fa-facebook-f ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
+                                    <div class="relative h-64 overflow-hidden">
+                                        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-full">
+                                            <div class="flex-shrink-0 w-full h-full snap-center">
+                                                <img src="image/20260101-001.jpg" alt="กิจกรรมพื้นที่" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute top-3 right-3 flex flex-col items-end gap-2">
+                                            <div class="bg-white/95 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-lg shadow-lg border border-slate-200/50 flex flex-col items-center min-w-[55px]">
+                                                <span class="text-[10px] font-bold uppercase text-pp-orange leading-none">ม.ค.</span>
+                                                <span class="text-xl font-black leading-none py-0.5">01</span>
+                                                <span class="text-[9px] text-slate-500 font-bold">2569</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                            <span class="text-white text-xs font-bold bg-pp-orange px-2 py-1 rounded">HAPPY NEW YEAR 2026</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="font-bold text-lg mb-2 group-hover:text-pp-orange transition">สวัสดีปีใหม่ 2569</h4>
+                                        <p class="text-slate-600 text-sm mb-4">วันขึ้นปีใหม่ 2569 ทนายเก้า ชวนหมออ๋อง (ปดิภัทธ์ สันติภาดา) อดีตรองประธานสภา กล่าวทักทายสวัสดีปีใหม่พี่น้องคนเมืองแพร่ หน้าวัดพระบาทมิ่งเมือง 
+                                            พร้อมกับนำเสนอนโยบายต่างสู่พี่-น้องชาวแพร่</p>
+                                        <a href="https://www.facebook.com/share/p/17VYqTxZiA/" target="_blank" class="inline-flex items-center text-xs font-bold text-pp-orange hover:text-slate-900 transition-colors">
+                                            ดูโพสต์ต้นฉบับ <i class="fab fa-facebook-f ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
+                                    <div class="relative h-64 overflow-hidden">
+                                        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-full">
+                                            <div class="flex-shrink-0 w-full h-full snap-center">
+                                                <img src="image/20251213.jpg" alt="กิจกรรมพื้นที่" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute top-3 right-3 flex flex-col items-end gap-2">
+                                            <div class="bg-white/95 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-lg shadow-lg border border-slate-200/50 flex flex-col items-center min-w-[55px]">
+                                                <span class="text-[10px] font-bold uppercase text-pp-orange leading-none">พ.ย.</span>
+                                                <span class="text-xl font-black leading-none py-0.5">27</span>
+                                                <span class="text-[9px] text-slate-500 font-bold">2568</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                            <span class="text-white text-xs font-bold bg-pp-orange px-2 py-1 rounded">ลงพื้นที่</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="font-bold text-lg mb-2 group-hover:text-pp-orange transition">ลงพื้นที่รับฟังปัญหาจากคนเฒ่า คนแก่</h4>
+                                        <p class="text-slate-600 text-sm mb-4">พูดคุย รับฟัง ข้อคิดเห็น ปัญหา และข้อเสนอแนะจากชาวบ้านโดยตรงมักจะมอบประสบณ์การตรงในการทำนโยบายเพื่อประชาชนได้ดีที่สุด</p>
+                                        <a href="https://www.facebook.com/share/p/17xrsVtJQP/" target="_blank" class="inline-flex items-center text-xs font-bold text-pp-orange hover:text-slate-900 transition-colors">
+                                            ดูโพสต์ต้นฉบับ <i class="fab fa-facebook-f ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
+                                    <div class="relative h-64 overflow-hidden">
+                                        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-full">
+                                            <div class="flex-shrink-0 w-full h-full snap-center">
+                                                <img src="image/20251127-002.jpg" alt="กิจกรรมพื้นที่" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute top-3 right-3 flex flex-col items-end gap-2">
+                                            <div class="bg-white/95 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-lg shadow-lg border border-slate-200/50 flex flex-col items-center min-w-[55px]">
+                                                <span class="text-[10px] font-bold uppercase text-pp-orange leading-none">พ.ย.</span>
+                                                <span class="text-xl font-black leading-none py-0.5">27</span>
+                                                <span class="text-[9px] text-slate-500 font-bold">2568</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                            <span class="text-white text-xs font-bold bg-pp-orange px-2 py-1 rounded">ช่วยเหลือสังคม</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="font-bold text-lg mb-2 group-hover:text-pp-orange transition">คนไทยไม่ทิ้งกัน จากเหนือสู่ใต้</h4>
+                                        <p class="text-slate-600 text-sm mb-4">ของช่วยเหลือผู้ประสบภัยมุ่งสู่ชาวใต้ รวบรวมจากอ.เมืองและใกล้เคียง รวมถึงจุดบริจาคของ คุณวสันต์ จันทร์สองและ คุณลักษณารีย์ ดวงตาคำ ผู้สมัครสส.เขต 2 และ เขต 3 จ.แพร่</p>
+                                        <a href="https://www.facebook.com/share/p/18ACKyPQXh/" target="_blank" class="inline-flex items-center text-xs font-bold text-pp-orange hover:text-slate-900 transition-colors">
+                                            ดูโพสต์ต้นฉบับ <i class="fab fa-facebook-f ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
+                                    <div class="relative h-64 overflow-hidden">
+                                        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-full">
+                                            <div class="flex-shrink-0 w-full h-full snap-center">
+                                                <img src="image/20251127-001.jpg" alt="กิจกรรมพื้นที่" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute top-3 right-3 flex flex-col items-end gap-2">
+                                            <div class="bg-white/95 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-lg shadow-lg border border-slate-200/50 flex flex-col items-center min-w-[55px]">
+                                                <span class="text-[10px] font-bold uppercase text-pp-orange leading-none">พ.ย.</span>
+                                                <span class="text-xl font-black leading-none py-0.5">27</span>
+                                                <span class="text-[9px] text-slate-500 font-bold">2568</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                            <span class="text-white text-xs font-bold bg-pp-orange px-2 py-1 rounded">ช่วยเหลือสังคม</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="font-bold text-lg mb-2 group-hover:text-pp-orange transition">ส่งของบริจาคสู่ภาคใต้</h4>
+                                        <p class="text-slate-600 text-sm mb-4">"คนแพร่นี้ใจงาม" น้ำใจจากคนแพร่มุ่งสู่ผู้ประสบภัยภาคใต้ โดยทีมพรรคประชาชนชลบุรีจะรวบรวมส่งต่อไปถึงมือผู้ประสบภัย</p>
+                                        <a href="https://www.facebook.com/share/p/1a6tgiuZiK/" target="_blank" class="inline-flex items-center text-xs font-bold text-pp-orange hover:text-slate-900 transition-colors">
+                                            ดูโพสต์ต้นฉบับ <i class="fab fa-facebook-f ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
+                                    <div class="relative h-64 overflow-hidden">
+                                        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-full">
+                                            <div class="flex-shrink-0 w-full h-full snap-center">
+                                                <img src="image/20251126-001.jpg" alt="กิจกรรมพื้นที่" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute top-3 right-3 flex flex-col items-end gap-2">
+                                            <div class="bg-white/95 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-lg shadow-lg border border-slate-200/50 flex flex-col items-center min-w-[55px]">
+                                                <span class="text-[10px] font-bold uppercase text-pp-orange leading-none">พ.ย.</span>
+                                                <span class="text-xl font-black leading-none py-0.5">26</span>
+                                                <span class="text-[9px] text-slate-500 font-bold">2568</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                            <span class="text-white text-xs font-bold bg-pp-orange px-2 py-1 rounded">ช่วยเหลือสังคม</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="font-bold text-lg mb-2 group-hover:text-pp-orange transition">ประสานงานช่วยน้ำท่วมภาคใต้</h4>
+                                        <p class="text-slate-600 text-sm mb-4">ร่วมเป็นสื่อกลางรับบริจาคสิ่งของเพื่อช่วยผู้ประสบภัยน้ำท่วมภาคใต้ ณ ศูนย์รับบริจาคและประสานงานช่วยน้ำท่วมภาคใต้ พรรคประชาชน จ.แพร่ (ชั่วคราว)</p>
+                                        <a href="https://www.facebook.com/share/p/14Xqv4zPJbz/" target="_blank" class="inline-flex items-center text-xs font-bold text-pp-orange hover:text-slate-900 transition-colors">
+                                            ดูโพสต์ต้นฉบับ <i class="fab fa-facebook-f ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
+                                    <div class="relative h-64 overflow-hidden">
+                                        <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-full">
+                                            <div class="flex-shrink-0 w-full h-full snap-center">
+                                                <img src="image/20251126-002.jpg" alt="กิจกรรมพื้นที่" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute top-3 right-3 flex flex-col items-end gap-2">
+                                            <div class="bg-white/95 backdrop-blur-sm text-slate-900 px-3 py-1 rounded-lg shadow-lg border border-slate-200/50 flex flex-col items-center min-w-[55px]">
+                                                <span class="text-[10px] font-bold uppercase text-pp-orange leading-none">พ.ย.</span>
+                                                <span class="text-xl font-black leading-none py-0.5">26</span>
+                                                <span class="text-[9px] text-slate-500 font-bold">2568</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                            <span class="text-white text-xs font-bold bg-pp-orange px-2 py-1 rounded">ช่วยเหลือสังคม</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="font-bold text-lg mb-2 group-hover:text-pp-orange transition">เปิดจุดประสานงานรับบริจาคช่วยภาคใต้</h4>
+                                        <p class="text-slate-600 text-sm mb-4">พรรคประชาชนจังหวัดแพร่เปิดจุดรับบริจาคช่วยภาคใต้ทั้ง 4 จุดในจังหวัดเพื่อช่วยเหลือผู้ประสบภัยน้ำท่วมภาคใต้</p>
+                                        <a href="https://www.facebook.com/share/p/14VStteZ3Au/" target="_blank" class="inline-flex items-center text-xs font-bold text-pp-orange hover:text-slate-900 transition-colors">
+                                            ดูโพสต์ต้นฉบับ <i class="fab fa-facebook-f ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
 
                                 <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group border border-transparent hover:border-pp-orange">
                                     <div class="relative h-64 overflow-hidden">
@@ -617,11 +955,30 @@
     </button>
 
     <script>
-        // Dropdown
-        const menuBtn = document.getElementById('menuBtn');
-        const dropdown = document.getElementById('myDropdown');
-        menuBtn.onclick = (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); };
-        window.onclick = () => dropdown.classList.remove('show');
+            // Dropdown
+            const menuBtn = document.getElementById('menuBtn');
+            const dropdown = document.getElementById('myDropdown');
+            const subBtn = document.getElementById('subBtn');
+            const subMenu = document.getElementById('subMenu');
+
+            menuBtn.onclick = (e) => { 
+                e.stopPropagation(); 
+                dropdown.classList.toggle('show'); 
+            };
+
+            // เพิ่ม Logic สำหรับ Sub Menu
+            subBtn.onclick = (e) => {
+                e.stopPropagation(); // กันไม่ให้เมนูหลักปิดตอนกดเมนูนย่อย
+                subMenu.classList.toggle('hidden');
+                // หมุนไอคอน Chevron (Optional)
+                subBtn.querySelector('.fa-chevron-right').classList.toggle('rotate-90');
+            };
+
+            // คลิกข้างนอกให้ปิดทั้งหมด
+            window.onclick = () => {
+                dropdown.classList.remove('show');
+                subMenu.classList.add('hidden');
+            };
 
         // --- ส่วนที่ 2: จัดการการส่งฟอร์ม (Google Sheets) ---
             const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwvtWrf-P30HI6sDyQ6YkViNl0Oh7uqs4WMERKB0Q9-Lx_4iZd4IA8wdoG3mRPowRXHIg/exec';

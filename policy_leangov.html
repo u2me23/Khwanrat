@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ทนายเก้า ขวัญรัตน์ พนมขวัญ</title>
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* 1. Font Setup */
+        @font-face {
+            font-family: 'Anakotmai';
+            src: url('webfont/Anakotmai-Light.woff2') format('woff2');
+            font-weight: 300;
+        }
+        @font-face {
+            font-family: 'Anakotmai';
+            src: url('webfont/Anakotmai-Medium.woff2') format('woff2');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'Anakotmai';
+            src: url('webfont/Anakotmai-Bold.woff2') format('woff2');
+            font-weight: 700;
+        }
+
+        /* 2. Global Styles */
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Anakotmai', sans-serif; 
+            background-color: #FDFBF7; /* เปลี่ยนเป็นขาวนวล สโลว์ไลฟ์ */
+        }
+
+        /* 3. Color Palette */
+        .bg-pp-gradient { background: linear-gradient(135deg, #FF7A00 0%, #FF5C00 100%); }
+        .bg-pp-orange { background-color: #FF5C00; }
+        .text-pp-orange { color: #FF5C00; }
+        .border-pp-orange { border-color: #FF5C00; }
+        .bg-phrae-forest { background-color: #1A2E2B; } /* สีเขียวป่าลึก */
+        
+        /* 4. Utilities */
+        .social-icon { transition: all 0.3s ease; }
+        .social-icon:hover { transform: translateY(-5px); color: #FF5C00; }
+        .dropdown-content { display: none; position: absolute; min-width: 180px; z-index: 100; }
+        .show { display: block !important; }
+        .profile-shadow { box-shadow: 0 20px 25px -5px rgba(255, 92, 0, 0.2); }
+
+        /* 5. Back to Top Button Logic */
+        #backToTop.visible {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <div id="user-view">
+        <nav class="bg-phrae-forest text-white p-4 sticky top-0 z-50 shadow-md border-b-4 border-pp-orange">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="image/Logo.svg" alt="Logo" class="h-10 w-auto object-contain">
+                    <span class="text-pp-orange font-bold text-lg tracking-tight border-r border-slate-700 pr-4">พรรคประชาชน</span>
+                    <h1 class="text-white font-medium text-base hidden lg:block pl-1">เก้า ขวัญรัตน์ พนมขวัญ</h1>
+                </div>
+                
+                <div class="space-x-4 md:space-x-6 text-sm font-medium flex items-center">
+                    <div class="relative">
+                        <button id="menuBtn" class="flex items-center hover:text-orange-400 transition focus:outline-none py-2 font-bold">
+                            เมนู <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
+                        </button>
+                            <div id="myDropdown" class="dropdown-content bg-white text-slate-900 mt-2 shadow-xl border-t-4 border-pp-orange rounded-b-md py-2">
+                                <a href="index.html" class="block px-4 py-3 hover:bg-orange-50 border-b border-gray-100 transition">
+                                    <i class="fas fa-home text-pp-orange mr-2"></i> หน้าหลัก
+                                </a>
+                                
+                                <div class="relative group">
+                                    <button id="subBtn" class="w-full text-left px-4 py-3 hover:bg-orange-50 transition flex justify-between items-center border-b border-gray-100 font-bold">
+                                        <span><i class="fas fa-bullseye text-pp-orange mr-2"></i> สิ่งที่อยากผลักดัน</span>
+                                        <i class="fas fa-chevron-right text-[10px]"></i>
+                                    </button>
+                                    
+                                    <div id="subMenu" class="hidden bg-slate-50 border-l-4 border-pp-orange">
+                                        <a href="target.html" class="block px-8 py-2 text-sm hover:text-pp-orange transition">• นโยบาย</a>
+                                        <a href="policy_teak.html" class="block px-8 py-2 text-sm hover:text-pp-orange transition">• ไม้สักยั่งยืน</a>
+                                        <a href="policy_leangov.html" class="block px-8 py-2 text-sm hover:text-pp-orange transition">• รัฐโปร่งใส</a>
+                                    </div>
+                                </div>
+                                <a href="work.html" class="block px-4 py-3 hover:bg-orange-50 border-b border-gray-100 transition">
+                                    <i class="fas fa-briefcase text-pp-orange mr-2"></i> งานพื้นที่
+                                </a>
+                                <a href="report.html" class="block px-4 py-3 hover:bg-orange-50 transition">
+                                    <i class="fas fa-comment-alt text-pp-orange mr-2"></i> แจ้งปัญหา/นัดหมาย
+                                </a>
+                            </div>
+                    </div>
+                    <a href="#report" class="bg-pp-orange px-4 py-2 rounded-full text-white font-bold hover:brightness-110 transition shadow-lg text-xs md:text-sm">แจ้งปัญหา</a>
+                </div>
+                
+            </div>
+        </nav>
+
+                <header id="home" class="py-20 border-b border-gray-100 bg-white">
+                    <div class="container mx-auto px-4 flex flex-col items-center text-center">
+                        <div class="relative mb-8">
+                            <div class="w-64 h-64 bg-slate-200 rounded-full overflow-hidden profile-shadow border-4 border-white ring-4 ring-orange-500/20">
+                                <img src="image/profilepic.PNG" alt="เก้า ขวัญรัตน์ พนมขวัญ" class="w-full h-full object-cover">
+                            </div>
+                            <div class="absolute bottom-2 right-0 bg-pp-gradient text-white px-4 py-1 font-bold text-xs shadow-lg rounded-full">ทนายเก้า</div>
+                        </div>
+                        <div class="max-w-2xl">
+                            <h2 class="text-4xl md:text-3xl font-black text-slate-900 mb-2 uppercase tracking-tight">ทนายเก้า ขวัญรัตน์ พนมขวัญ</h2>
+                            <p class="text-pp-orange text-xl font-bold mb-4">พรรคประชาชน | People's Party</p>
+                            <p class="text-black font-bold mb-4 bg-orange-50 inline-block px-4 py-1 rounded-full text-sm">อดีตผู้สมัคร สส. แพร่ เขต 1</p>
+                            <p class="text-slate-600 text-lg leading-relaxed mb-8 italic">"โดยประชาชน เพื่อประชาชน สร้างประเทศไทยที่อำนาจสูงสุดเป็นของประชาชน"</p>
+                            <div class="flex justify-center gap-8 text-3xl">
+                                <a href="https://www.facebook.com/profile.php?id=61577619298919" target="_blank" class="social-icon text-slate-400 hover:text-[#1877F2]"><i class="fab fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/kaokhwanrat" target="_blank" class="social-icon text-slate-400 hover:text-[#E4405F]"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@khwanratpanomkwan" target="_blank" class="social-icon text-slate-400 hover:text-black"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+
+            <article class="py-16">
+                <div class="container mx-auto px-4 max-w-3xl">
+                    <header class="mb-12 text-center">
+                        <h1 class="text-4xl font-black text-slate-900 mb-6 leading-tight">นโยบายปฏิรูปรัฐทันสมัย</h1>
+                        <div class="w-20 h-1 bg-pp-orange mx-auto"></div>
+                    </header>
+
+                    <section class="grid md:grid-cols-2 gap-4 mb-12">
+                        <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-pp-orange">
+                            <span class="font-bold text-pp-orange"> (1) รัฐโปร่งใส ไร้คอร์รัปชัน (Clean)</span>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-pp-orange">
+                            <span class="font-bold text-pp-orange"> (2) รัฐที่มีประสิทธิภาพสูง ปราศจากกฎระเบียบล้าสมัย ใช้เทคโนโลยีดิจิทัลเข้ามาพัฒนาการให้บริการ (Lean)</span>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-pp-orange">
+                            <span class="font-bold text-pp-orange"> (3) รัฐที่เสริมสร้างอำนาจให้ประชาชน ภาคเอกชน ภาคประชาสังคม (Empowering)</span>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-pp-orange">
+                            <span class="font-bold text-pp-orange"> (4) รัฐที่ตอบสนองฉับไวต่อสถานการณ์ ทั้งภัยพิบัติและความท้าทายใหม่ๆ ของโลก (Responsive)</span>
+                        </div>
+                    </section>
+
+                    <section class="prose prose-slate prose-lg max-w-none text-slate-700 leading-relaxed">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-4">ยกเลิกใบอนุญาตล้าสมัยภายใน 18 เดือน</h2>
+                        <p class="mb-6">
+                            การจะทำให้รัฐโปร่งใสไร้คอร์รัปชัน และมีประสิทธิภาพสูง ต้องลดใบอนุญาตที่ไม่จำเป็นเพื่อปิดช่องทางเรียกรับผลประโยชน์
+                        </p>
+
+                        <p class="mb-6">
+                            ยกตัวอย่าง ประกาศของกระทรวงสาธารณสุขเรื่องกิจการที่เป็นอันตรายต่อสุขภาพที่ให้อำนาจท้องถิ่นออกใบอนุญาตถึง 142 ใบสำหรับ 142 กิจการ แต่เมื่อไปดูกิจการต่างๆ เหล่านั้นแล้วก็ยังสงสัยว่าตกลงแล้วเป็นกิจการที่เป็นอันตรายต่อสุขภาพอย่างไร เช่น การทำไอศกรีม การตั้งฟิตเนส หรือแม้แต่การทำสระว่ายน้ำ ประกาศฉบับนี้มีแต่เพิ่มกิจการเข้าไปทุกวัน ไม่เคยถูกยกเลิกเลยแม้แต่กิจการเดียว
+                        </p>
+
+                        <div class="bg-phrae-forest text-white p-8 rounded-2xl mb-8">
+                            <h3 class="text-xl font-bold text-pp-orange mb-4">Operation 18</h3>
+                            <p class="mb-4">
+                                ทีมผู้บริหารของพรรคประชาชนจึงเสนอ Operation 18 หรือปฏิบัติการทำทุกอย่างเร่งรัดให้เสร็จสิ้นภายใน 18 เดือน ยกเลิกกฎระเบียบใบอนุญาตต่างๆ ที่ไม่จำเป็น ส่วนที่เหลือต้องมีการจัดตามความเสี่ยง เช่น กิจการที่ความเสี่ยงน้อยให้จดแจ้ง ถ้าความเสี่ยงระดับกลาง ให้เป็นการอนุมัติแบบอัตโนมัติ ส่วนที่มีความเสี่ยงสูง อาจยังต้องมีการขออนุญาตอย่างเต็มรูปแบบ แต่ใช้เทคโนโลยีเข้ามาช่วยเพื่อลดดุลพินิจไม่ให้ถูกเรียกรับผลประโยชน์ เช่น ใบอนุญาตก่อสร้างต่างๆ
+                            </p>
+                        </div>
+
+                        <p class="mb-6 font-bold text-slate-900">
+                            แต่หากผู้ประกอบการยังถูกเรียกรับผลประโยชน์ ขอให้อดทนไว้เพราะไม่เกิน 30 วัน ท่านจะได้ใบอนุญาตทันที ตามกฎหมายฉบับใหม่ที่เราแก้ไขไปแล้ว จะไม่สามารถดึงเวลาด้วยการขอเอกสารไปเรื่อยๆ อีกต่อไป แต่จะปรับเปลี่ยนเป็นเอกสารใดที่หน่วยงานรัฐมีอยู่แล้ว ห้ามขอเพิ่มอีก จากนั้นพิจารณา 30 วัน ถ้ายังไม่มีคำตอบจากหน่วยงานรัฐ ถือว่าอนุญาตโดยอัตโนมัติ
+                        </p>
+
+                        <p class="mb-10">
+                            การลดขั้นตอนก่อให้เกิดการลดความเสี่ยงในการคอร์รัปชัน เมื่อขั้นตอนลดลงคอร์รัปชันก็ลดลงโดยมีนัยยะ และหากลดคอร์รัปชันได้มากเท่าไหร่งบประมาณที่สูญเสียไปก็ย่อมกลับมาพัฒนาประเทศได้มากขึ้น
+                        </p>
+                    </section>
+
+                    <footer class="border-t border-slate-200 pt-8 mt-12 text-center">
+                        <p class="text-slate-500 mb-4 italic">อ่านรายละเอียดนโยบายฉบับเต็มได้ที่:</p>
+                        <a href="https://peoplesparty.or.th/articles/23587/" target="_blank" class="inline-flex items-center text-pp-orange font-bold hover:underline">
+                            <i class="fas fa-external-link-alt mr-2"></i> https://peoplesparty.or.th/articles/23587/
+                        </a>
+                    </footer>
+                </div>
+            </article>
+
+        
+        <section class="py-20 bg-white text-center border-t border-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto">
+                    <div class="mb-6 flex justify-center">
+                        <div class="w-16 h-1 bg-pp-orange"></div>
+                    </div>
+                    <h3 class="text-3xl font-black text-slate-900 mb-4 uppercase">ร่วมเป็นส่วนหนึ่งของการเปลี่ยนแปลง</h3>
+                    <p class="text-slate-600 mb-10 text-lg leading-relaxed px-4">
+                        สนับสนุนการทำงานของพรรคประชาชน เพื่อสร้างการเมืองที่โปร่งใส <br class="hidden md:block"> และทำงานเพื่อพี่น้องประชาชนอย่างแท้จริง
+                    </p>
+                    <a href="https://donation.peoplesparty.or.th/donate" target="_blank" 
+                       class="inline-block bg-pp-orange px-12 py-5 rounded-sm text-white font-black text-xl hover:bg-orange-600 transition-all shadow-2xl shadow-orange-100 hover:-translate-y-1">
+                        <i class="fas fa-heart mr-2"></i> สนับสนุนพรรคประชาชน <i class="fas fa-heart mr-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-phrae-forest text-slate-400 py-12 text-center border-t-4 border-pp-orange">
+            <p class="font-bold text-white mb-2">© 2026 ทนายเก้า ขวัญรัตน์ พนมขวัญ | จนกว่าอำนาจสูงสุดจะเป็นของประชาชน</p>
+        </footer>
+    </div>
+
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-pp-orange text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible transition-all duration-300 z-[100] hover:-translate-y-2 transform translate-y-10">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+            // Dropdown
+            const menuBtn = document.getElementById('menuBtn');
+            const dropdown = document.getElementById('myDropdown');
+            const subBtn = document.getElementById('subBtn');
+            const subMenu = document.getElementById('subMenu');
+
+            menuBtn.onclick = (e) => { 
+                e.stopPropagation(); 
+                dropdown.classList.toggle('show'); 
+            };
+
+            // เพิ่ม Logic สำหรับ Sub Menu
+            subBtn.onclick = (e) => {
+                e.stopPropagation(); // กันไม่ให้เมนูหลักปิดตอนกดเมนูนย่อย
+                subMenu.classList.toggle('hidden');
+                // หมุนไอคอน Chevron (Optional)
+                subBtn.querySelector('.fa-chevron-right').classList.toggle('rotate-90');
+            };
+
+            // คลิกข้างนอกให้ปิดทั้งหมด
+            window.onclick = () => {
+                dropdown.classList.remove('show');
+                subMenu.classList.add('hidden');
+            };
+
+        // --- ส่วนที่ 2: จัดการการส่งฟอร์ม (Google Sheets) ---
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwvtWrf-P30HI6sDyQ6YkViNl0Oh7uqs4WMERKB0Q9-Lx_4iZd4IA8wdoG3mRPowRXHIg/exec';
+
+            document.getElementById('reportForm').onsubmit = function(e) {
+            e.preventDefault();
+            const btnText = document.getElementById('btnText');
+            const submitBtn = document.getElementById('submitBtn');
+
+            submitBtn.disabled = true;
+            btnText.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i> กำลังส่งข้อมูล...';
+            
+            const payload = {
+                sheetTarget: document.getElementById('sheetType').value,
+                title: document.getElementById('title').value,
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                details: document.getElementById('details').value
+            };
+
+            // ปรับการส่งข้อมูลแบบ JSON string
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                // แม้จะติด CORS แต่ถ้าข้อมูลเข้า Sheet แล้วถือว่าใช้ได้
+                alert('ส่งข้อมูลเรียบร้อยแล้วครับ!'); 
+                document.getElementById('reportForm').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('ส่งข้อมูลเรียบร้อยแล้ว (หากข้อมูลไม่เข้ากรุณาเช็คสิทธิ์ใน Apps Script)');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                btnText.innerText = 'ส่งข้อมูลแจ้งเรื่องทันที';
+            });
+        }
+
+        // Back to Top Logic (Fixed at 50px)
+        const btt = document.getElementById('backToTop');
+        window.onscroll = () => {
+            if (window.pageYOffset > 50) {
+                btt.classList.add('visible');
+                btt.classList.remove('opacity-0', 'invisible', 'translate-y-10');
+            } else {
+                btt.classList.remove('visible');
+                btt.classList.add('opacity-0', 'invisible', 'translate-y-10');
+            }
+        };
+        btt.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Modal Logic
+        function closeAnnouncement() { document.getElementById('announcementModal').classList.add('hidden'); }
+        window.onload = () => {
+            setTimeout(() => { document.getElementById('announcementModal').classList.remove('hidden'); }, 1200);
+        };
+    </script>
+</body>
+</html>
